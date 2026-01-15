@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="sol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469.79 469.79">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #dabf41;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="234.89" cy="234.89" r="57"/>
+  <g>
+    <g>
+      <rect class="cls-1" x="229.89" y="124.59" width="10" height="35" rx="5" ry="5"/>
+      <rect class="cls-1" x="229.89" y="310.19" width="10" height="35" rx="5" ry="5"/>
+    </g>
+    <g>
+      <rect class="cls-1" x="322.69" y="217.39" width="10" height="35" rx="5" ry="5" transform="translate(562.59 -92.8) rotate(90)"/>
+      <rect class="cls-1" x="137.09" y="217.39" width="10" height="35" rx="5" ry="5" transform="translate(376.99 92.8) rotate(90)"/>
+    </g>
+  </g>
+  <g>
+    <g>
+      <rect class="cls-1" x="295.51" y="151.77" width="10" height="35" rx="5" ry="5" transform="translate(207.71 -162.91) rotate(45)"/>
+      <rect class="cls-1" x="164.27" y="283.01" width="10" height="35" rx="5" ry="5" transform="translate(262.07 -31.68) rotate(45)"/>
+    </g>
+    <g>
+      <rect class="cls-1" x="295.51" y="283.01" width="10" height="35" rx="5" ry="5" transform="translate(725.5 300.51) rotate(135)"/>
+      <rect class="cls-1" x="164.27" y="151.77" width="10" height="35" rx="5" ry="5" transform="translate(408.67 169.27) rotate(135)"/>
+    </g>
+  </g>
+</svg>
