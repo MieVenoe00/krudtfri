@@ -38,6 +38,33 @@
   --dark-element: #1e1e22;
 }
 
+/* Tema skift knap */
+.temaSkiftKnap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  margin-bottom: 2rem;
+  background: var(--spectra-100);
+  border: 2px solid var(--spectra-400);
+  border-radius: 25px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--spectra-700);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.temaSkiftKnap:hover {
+  background: var(--spectra-200);
+  transform: translateY(-2px);
+}
+
+.temaIkon {
+  font-size: 18px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -135,7 +162,7 @@ figure {
 }
 
 /* Light mode styles */
-#lightMode {
+.app[data-tema="light"] {
   background: linear-gradient(
     180deg,
     var(--mellem-graa) 0%,
@@ -263,8 +290,11 @@ main {
 .tyrkisBoxIcon svg path {
   stroke: var(--spectra-500);
 }
-
-.gulBoxIcon {
+.gulBoxIconRap {
+  background: var(--bronze-olive-200);
+}
+.gulBoxIcon,
+.gulBoxIconRap {
   background: var(--bronze-olive-200);
 }
 .gulBoxIcon svg path {
@@ -327,7 +357,26 @@ main {
   cursor: pointer;
 }
 
-/* Weather Widget Styles */
+/* Article Link Styles */
+.articleLink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  width: 100%;
+}
+
+.articleLink:hover {
+  text-decoration: none;
+}
+
+.articleLink:visited {
+  color: inherit;
+}
+
+.articleLink .boxComponent {
+  width: 100%;
+}
+
 .vejrWidget {
   display: flex;
   height: 69px;
@@ -410,9 +459,93 @@ main {
   object-fit: contain;
 }
 
-.articleLink {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  width: 100%;
+/* Dark mode styles */
+.app[data-tema="dark"] {
+  background: linear-gradient(
+    180deg,
+    var(--sort) 25.48%,
+    var(--spectra-900) 100%
+  );
+}
+
+.app[data-tema="dark"] #profil h2 {
+  color: var(--hvid);
+}
+
+.app[data-tema="dark"] #profil img {
+  border-color: var(--spectra-600);
+}
+
+.app[data-tema="dark"] #notifikation-btn {
+  border-color: var(--spectra-700);
+  background: var(--spectra-950);
+}
+
+.app[data-tema="dark"] .gradientBox {
+  background: linear-gradient(
+    180deg,
+    var(--spectra-500) 0%,
+    var(--spectra-300) 100%
+  );
+}
+
+.app[data-tema="dark"] .tyrkisBox {
+  background: var(--spectra-400);
+}
+
+.app[data-tema="dark"] .gulBox {
+  background: var(--bronze-olive-400);
+}
+
+.app[data-tema="dark"] .boxButton {
+  background: var(--spectra-200);
+  color: var(--spectra-800);
+}
+
+.app[data-tema="dark"] .gulbutton {
+  background: var(--bronze-olive-200);
+  color: var(--bronze-olive-800);
+}
+
+.app[data-tema="dark"] .tyrkisBoxIcon {
+  background: var(--spectra-300);
+}
+.app[data-tema="dark"] .tyrkisBoxIcon svg path {
+  stroke: var(--spectra-600);
+}
+
+.app[data-tema="dark"] .gulBoxIcon {
+  background: var(--bronze-olive-300);
+}
+
+.app[data-tema="dark"] .gulBoxIconRap {
+  background: var(--bronze-olive-300);
+}
+.app[data-tema="dark"] .gulBoxIcon svg path {
+  color: var(--bronze-olive-600);
+}
+.app[data-tema="dark"] .gulBoxIconRap svg path {
+  fill: var(--bronze-olive-600);
+}
+
+.app[data-tema="dark"] #boxLogo svg path {
+  fill: var(--spectra-200);
+}
+
+.app[data-tema="dark"] #soegKnap {
+  background: var(--bronze-olive-500);
+  border-color: var(--bronze-olive-950);
+}
+
+.app[data-tema="dark"] .vejrWidget {
+  background: var(--spectra-900);
+  border-color: var(--spectra-700);
+}
+
+.app[data-tema="dark"] .byNavn {
+  color: var(--spectra-100);
+}
+
+.app[data-tema="dark"] .temperatur {
+  color: var(--spectra-100);
 }

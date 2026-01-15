@@ -74,7 +74,7 @@ function visVejr(data) {
             )}°/${Math.round(data.main.temp_max)}°C</div>
         </section>
         <div class="vejrIkon">
-            <img src="../public/vejr/${ikonFil}" alt="vejr ikon">
+            <img src="public/vejr/${ikonFil}" alt="vejr ikon">
         </div>
     `;
 }
@@ -100,9 +100,54 @@ function initVejr() {
   );
 }
 
-// Initialiser vejr widget når DOM er klar
+// Tema Skift Funktionalitet
+function initTemaSkift() {
+  const temaSkiftKnap = document.getElementById("temaSkift");
+  const appSektion = document.querySelector(".app[data-tema]");
+  const temaIkon = document.querySelector(".temaIkon");
+  const temaTekst = document.querySelector(".temaTekst");
+
+  if (!temaSkiftKnap || !appSektion) return;
+
+  // Tjek om der er gemt et tema i localStorage
+  const gemtTema = localStorage.getItem("tema") || "light";
+  appSektion.setAttribute("data-tema", gemtTema);
+  opdaterKnapTekst(gemtTema);
+
+  // Toggle mellem light og dark mode
+  temaSkiftKnap.addEventListener("click", () => {
+    const aktuelTema = appSektion.getAttribute("data-tema");
+    const nytTema = aktuelTema === "light" ? "dark" : "light";
+
+    appSektion.setAttribute("data-tema", nytTema);
+    localStorage.setItem("tema", nytTema);
+    opdaterKnapTekst(nytTema);
+  });
+
+  function opdaterKnapTekst(tema) {
+    if (tema === "dark") {
+      temaTekst.textContent = "Light Mode";
+      const iosBar = document.getElementById("iosBar");
+      if (iosBar) {
+        iosBar.src = "public/iosBarDark.svg";
+      }
+    } else {
+      temaTekst.textContent = "Dark Mode";
+      const iosBar = document.getElementById("iosBar");
+      if (iosBar) {
+        iosBar.src = "public/iosBar.svg";
+      }
+    }
+  }
+}
+
+// Initialiser alt når DOM er klar
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initVejr);
+  document.addEventListener("DOMContentLoaded", () => {
+    initVejr();
+    initTemaSkift();
+  });
 } else {
   initVejr();
+  initTemaSkift();
 }
