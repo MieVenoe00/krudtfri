@@ -409,3 +409,10 @@ main {
   height: 100%;
   object-fit: contain;
 }
+
+.articleLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+}
