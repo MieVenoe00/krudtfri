@@ -74,7 +74,7 @@ function visVejr(data) {
             )}°/${Math.round(data.main.temp_max)}°C</div>
         </section>
         <div class="vejrIkon">
-            <img src="public/vejr/${ikonFil}" alt="vejr ikon">
+            <img src="../public/vejr/${ikonFil}" alt="vejr ikon">
         </div>
     `;
 }
