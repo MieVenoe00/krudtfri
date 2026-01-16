@@ -74,7 +74,7 @@ function visVejr(data) {
             )}°/${Math.round(data.main.temp_max)}°C</div>
         </section>
         <div class="vejrIkon">
-            <img src="/public/vejr/${ikonFil}" alt="vejr ikon">
+            <img src="/vejr/${ikonFil}" alt="vejr ikon">
             
         </div>
     `;
@@ -130,13 +130,13 @@ function initTemaSkift() {
       temaTekst.textContent = "Light Mode";
       const iosBar = document.getElementById("iosBar");
       if (iosBar) {
-        iosBar.src = "../public/IOSDark.svg";
+        iosBar.src = "/IOSDark.svg";
       }
     } else {
       temaTekst.textContent = "Dark Mode";
       const iosBar = document.getElementById("iosBar");
       if (iosBar) {
-        iosBar.src = "../public/IOSLight.svg";
+        iosBar.src = "/IOSLight.svg";
       }
     }
   }
