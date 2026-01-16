@@ -234,19 +234,18 @@ header {
 
 /* Select Styling */
 select {
-  /* Fjern default browser styling */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 
-  display: flex;
-  min-width: 120px;
+  display: inline-flex;
+  min-width: auto;
   width: auto;
   height: 50px;
-  padding: 0 40px 0 24px;
+  padding: 0 12px 0 24px; /* Mindre padding på højre side */
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px; /* Gap mellem tekst og pil */
   flex-shrink: 0;
 
   border-radius: 40px;
@@ -262,10 +261,14 @@ select {
   line-height: normal;
   cursor: pointer;
 
-  background-image: url("/public/dropdownPil.svg");
+  /* Tilføj custom dropdown pil */
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23121f21' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 16px center;
+  background-position: calc(100% - 20px) center; /* Tæt på højre kant */
   background-size: 12px;
+
+  /* Tilføj ekstra plads til pilen */
+  padding-right: calc(12px + 8px + 20px); /* pil bredde + margin + padding */
 }
 
 select:focus {
