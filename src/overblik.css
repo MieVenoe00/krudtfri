@@ -133,6 +133,27 @@ figure {
   gap: 40px;
   box-sizing: border-box;
   overflow-y: auto;
+  /* Fast højde */
+  overflow-y: auto; /* Scroll + skjul overflow */
+  overflow-x: hidden;
+}
+
+#iosBar {
+  position: sticky;
+  top: 0; /* SKAL være 0 for sticky */
+  z-index: 10;
+
+  /* Træk den længere op */
+  margin-top: -53px;
+  margin-left: -32.5px;
+  margin-right: -32.5px;
+  margin-bottom: 0;
+
+  /* Flyt den yderligere op visuelt */
+  transform: translateY(-50px); /* Juster dette tal for at flytte op/ned */
+
+  width: calc(100% + 65px);
+  height: 44px;
 }
 
 /* Light mode styles */

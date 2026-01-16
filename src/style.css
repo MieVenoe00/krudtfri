@@ -144,9 +144,6 @@ figure {
   box-sizing: border-box;
 
   position: relative;
-  height: 100vh; /* Fast højde */
-  overflow-y: auto; /* Scroll + skjul overflow */
-  overflow-x: hidden;
 }
 
 #homeIndicator {
