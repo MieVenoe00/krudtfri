@@ -133,7 +133,6 @@ figure {
   padding-bottom: 34px;
   padding-left: 32.5px;
   padding-right: 32.5px;
-  position: relative;
   border-radius: 60px;
   border: solid 7px #000000;
   display: flex;
@@ -143,6 +142,11 @@ figure {
   flex-direction: column;
   gap: 40px;
   box-sizing: border-box;
+
+  position: relative;
+  height: 100vh; /* Fast højde */
+  overflow-y: auto; /* Scroll + skjul overflow */
+  overflow-x: hidden;
 }
 
 #homeIndicator {
@@ -154,10 +158,18 @@ figure {
   height: 7px;
 }
 #iosBar {
-  position: absolute;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 393px;
+  z-index: 10;
+
+  /* Træk iosBar tilbage over padding */
+  margin-top: -53px;
+  margin-left: -32.5px;
+  margin-right: -32.5px;
+  margin-bottom: 0;
+
+  /* Dæk hele bredden */
+  width: calc(100% + 65px); /* 100% + (32.5px + 32.5px) */
   height: 44px;
 }
 
