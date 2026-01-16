@@ -294,10 +294,10 @@ select:focus {
 }
 
 .dateComponet {
-  display: flex;
+  position: relative;
   width: 327px;
-  height: 350px;
-
+  height: auto;
+  display: flex;
   align-items: flex-end;
   gap: 10px;
   /* justify-content: center; */
@@ -310,9 +310,6 @@ select:focus {
   padding: 18px;
   flex-direction: column;
   align-items: center;
-  /* row-gap: 25px;
-  column-gap: 25px; */
-  position: absolute;
 
   border-radius: 10px;
   background: var(--hvid);
@@ -382,6 +379,10 @@ select:focus {
 }
 
 .unFold {
+  position: absolute; /* ⬅️ Knappen er stadig absolute */
+  bottom: 0;
+  right: 0;
+
   display: flex;
   width: 33px;
   height: 33px;
@@ -391,11 +392,12 @@ select:focus {
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
-  aspect-ratio: 1/1;
   z-index: 10;
 
   border-radius: 10px 0;
-  background: var(--Spectra-100, #dbecea);
+  background: var(--spectra-100);
+  border: none;
+  cursor: pointer;
   border: none;
 }
 
