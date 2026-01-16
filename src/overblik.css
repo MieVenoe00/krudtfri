@@ -1,0 +1,292 @@
+@import url("https://use.typekit.net/vvi2lfm.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+  /* Primær farve tema */
+  --spectra-50: #f4f9f9;
+  --spectra-100: #dbecea;
+  --spectra-200: #b6d9d6;
+  --spectra-300: #8abebb;
+  --spectra-400: #629f9e;
+  --spectra-500: #488484;
+  --spectra-600: #386869;
+  --spectra-700: #335b5c;
+  --spectra-800: #294546;
+  --spectra-900: #263a3b;
+  --spectra-950: #121f21;
+
+  /* Sekundær farve tema */
+  --bronze-olive-50: #fcf7e9;
+  --bronze-olive-100: #f9efce;
+  --bronze-olive-200: #f3e3a3;
+  --bronze-olive-300: #e8d26e;
+  --bronze-olive-400: #dabf41;
+  --bronze-olive-500: #c0a822;
+  --bronze-olive-600: #998717;
+  --bronze-olive-700: #756916;
+  --bronze-olive-800: #5d5517;
+  --bronze-olive-900: #4e4918;
+  --bronze-olive-950: #2b2908;
+
+  /* baggrund farver*/
+  --hvid: #ffffff;
+  --lys-graa: #fafafa;
+  --mellem-graa: #f4f4f5;
+  --dark-graa: #0e0e11;
+  --sort: #18181b;
+  --dark-element: #1e1e22;
+}
+
+/* Tema skift knap */
+.temaSkiftKnap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  margin-bottom: 2rem;
+  background: var(--spectra-100);
+  border: 2px solid var(--spectra-400);
+  border-radius: 25px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--spectra-700);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.temaSkiftKnap:hover {
+  background: var(--spectra-200);
+  transform: translateY(-2px);
+}
+
+.temaIkon {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+button,
+div {
+  font-family: "Ubuntu", sans-serif;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#overskrift {
+  font-size: 3rem;
+}
+
+#rubrik {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.mainpage {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--hvid);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app {
+  width: 407px;
+  height: 864px;
+  background-color: var(--lys-graa);
+  padding-top: 53px;
+  padding-bottom: 34px;
+  padding-left: 32.5px;
+  padding-right: 32.5px;
+  position: relative;
+  border-radius: 60px;
+  border: solid 7px #000000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 40px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+#homeIndicator {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 184px;
+  height: 7px;
+}
+
+#iosBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 393px;
+  height: 44px;
+}
+
+/* Light mode styles */
+.app[data-tema="light"] {
+  background: linear-gradient(
+    180deg,
+    var(--mellem-graa) 0%,
+    var(--spectra-50) 100%
+  );
+}
+
+/* Dark mode styles */
+.app[data-tema="dark"] {
+  background: linear-gradient(180deg, var(--dark-graa) 0%, var(--sort) 100%);
+}
+
+.app[data-tema="dark"] #overblikOverskrift {
+  color: var(--spectra-100);
+}
+
+.app[data-tema="dark"] #notifikation-btn {
+  border-color: var(--spectra-300);
+  background: var(--dark-element);
+}
+
+.app[data-tema="dark"] .btn {
+  border-color: var(--spectra-300);
+  background: var(--dark-element);
+}
+
+/* Header */
+header {
+  display: flex;
+  width: 100%;
+  height: 44px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#notifikation-btn,
+.btn {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  padding: 9px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  border-radius: 40px;
+  border: 1.5px solid var(--spectra-600);
+  background: var(--spectra-50);
+  cursor: pointer;
+}
+
+/* Overblik Section */
+#overblikSection {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+#overblikOverskrift {
+  color: var(--spectra-950);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.filterKnapper {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 7px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+/* Select Styling */
+select {
+  /* Fjern default browser styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  display: flex;
+  min-width: 120px;
+  width: auto;
+  height: 50px;
+  padding: 0 40px 0 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+
+  border-radius: 40px;
+  background: var(--spectra-300);
+  border: none;
+
+  color: var(--spectra-950);
+  text-align: left;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+
+  background-image: url("/public/dropdownPil.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+}
+
+select:focus {
+  outline: none;
+}
+
+/* Dark mode select styling */
+.app[data-tema="dark"] select {
+  background-color: var(--spectra-800);
+  color: var(--spectra-100);
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23dbecea' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.app[data-tema="dark"] select:hover {
+  background-color: var(--spectra-700);
+}
+
+/* Main content */
+main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 16px;
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/overblik.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/vvi2lfm.css">
+    <title>krudtfri</title>
+  </head>
+  <body>
+    <div class="mainpage">
+      <h1 id="overskrift" >krudtfri</h1>
+      <p id="rubrik" >Velkommen til krudtfri - xxxxx</p>
+      <button id="temaSkift" class="temaSkiftKnap">
+        <span class="temaTekst">Dark Mode</span>
+      </button>
+      
+      <section data-tema="light" class="app">
+        <img id="iosBar" src="public/iosBar.svg" alt="">
+        <img id="homeIndicator" src="public/HomeIndicator.svg" alt="">
+        <header>
+            <a href="index.html">
+          <button class="btn" id="tilbage-btn"><img src="public/pil.svg" alt=""></button></a>
+          <button id="notifikation-btn"><img src="public/notifikationIkon.svg" alt=""></button>
+        </header>
+        <section id="overblikSection">
+          <h2 id="overblikOverskrift">Overblik</h2>
+          <div class="overblikFilter">
+            <form class="filterKnapper" action="">
+            <select id="emne" name="emne">
+                <option value="skader">Skader</option>
+                <option value="personlig">Personlig</option>
+                <option value="region">Region</option>
+                <option value="brand">Brand</option>
+            </select>
+            <select id="årstal" name="årstal">
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>                
+            </select></form>
+          </div>
+        </section>
+        
+        <main>
+          
+        </main>
+      </section>
+    
+    </div>
+
+
+
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
