@@ -179,7 +179,8 @@ figure {
   align-items: center;
   gap: 10px;
 
-  margin-bottom: -16px;
+  margin-top: auto;
+  transform: translateY(4px);
 
   border-radius: 40px;
   border: 2px solid var(--spectra-400);
