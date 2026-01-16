@@ -159,7 +159,7 @@ figure {
 }
 #iosBar {
   position: sticky;
-  top: 0;
+  top: -53;
   z-index: 10;
 
   /* Træk iosBar tilbage over padding */
