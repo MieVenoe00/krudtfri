@@ -129,13 +129,13 @@ function initTemaSkift() {
       temaTekst.textContent = "Light Mode";
       const iosBar = document.getElementById("iosBar");
       if (iosBar) {
-        iosBar.src = "public/IOSDark.svg";
+        iosBar.src = "../public/IOSDark.svg";
       }
     } else {
       temaTekst.textContent = "Dark Mode";
       const iosBar = document.getElementById("iosBar");
       if (iosBar) {
-        iosBar.src = "public/IOSLight.svg";
+        iosBar.src = "../public/IOSLight.svg";
       }
     }
   }
