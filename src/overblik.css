@@ -48,7 +48,7 @@
   background: var(--spectra-100);
   border: 2px solid var(--spectra-400);
   border-radius: 25px;
-  font-family: "Ubuntu", sans-serif;
+
   font-size: 14px;
   font-weight: 500;
   color: var(--spectra-700);
@@ -81,13 +81,16 @@ span {
   margin: 0;
   padding: 0;
   font-family: "Ubuntu", sans-serif;
+  /* font-family: "Nunito Sans", sans-serif; */
   font-style: normal;
   font-weight: 400;
 }
 
 button,
-div {
+div,
+select {
   font-family: "Ubuntu", sans-serif;
+  /* font-family: "Nunito Sans", sans-serif; */
 }
 
 figure {
@@ -237,7 +240,7 @@ figure {
 .menuItemh2 {
   color: var(--spectra-800);
   text-align: center;
-  font-family: Inter;
+
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -294,7 +297,7 @@ header {
   color: var(--spectra-950);
   font-size: 36px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: normal;
 }
 
@@ -327,7 +330,6 @@ select {
 
   color: var(--spectra-950);
   text-align: center;
-  font-family: "Ubuntu", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -401,9 +403,8 @@ select:focus {
   color: var(--spectra-950);
   font-size: 14px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   line-height: normal;
-  letter-spacing: -0.65px;
 }
 
 .shareBtn {
@@ -438,11 +439,14 @@ select:focus {
   font-weight: 400;
   line-height: normal;
 }
+.dataFigcaptionSec {
+  margin-top: 10px;
+}
 
-.dataBroedtekst {
+.dataBroedtekst p {
   align-self: stretch;
   color: var(--Spectra-950, #121f21);
-  font-family: Inter;
+
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -526,7 +530,7 @@ main {
   color: var(--mellem-graa);
 }
 
-.app[data-tema="dark"] .dataBroedtekst {
+.app[data-tema="dark"] .dataBroedtekst p {
   color: var(--mellem-graa);
 }
 .app[data-tema="dark"] .unFold {
