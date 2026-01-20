@@ -133,7 +133,7 @@ figure {
   justify-content: flex-start;
   align-items: center; /* ⬅️ ÆNDRET til center */
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
   box-sizing: border-box;
   overflow-y: auto;
   overflow-x: hidden;
@@ -290,7 +290,7 @@ header {
   width: 100%;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 7px;
 }
 
 #overblikOverskrift {
@@ -394,6 +394,20 @@ select:focus {
   width: 291px;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.headTekst {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.headTekst p {
+  color: var(--spectra-900);
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: normal;
 }
 
 .dataRubrik {
@@ -522,7 +536,8 @@ main {
   background: var(--dark-element);
 }
 
-.app[data-tema="dark"] .dataRubrik {
+.app[data-tema="dark"] .dataRubrik,
+.headTekst p {
   color: var(--lys-graa);
 }
 
