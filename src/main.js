@@ -90,12 +90,12 @@ function initVejr() {
         );
         visVejr(data);
       } catch {
-        const data = await hentVejrData(null, null, "Copenhagen");
+        const data = await hentVejrData(null, null, "Taastrup");
         visVejr(data);
       }
     },
     async () => {
-      const data = await hentVejrData(null, null, "Copenhagen");
+      const data = await hentVejrData(null, null, "Taastrup");
       visVejr(data);
     }
   );
